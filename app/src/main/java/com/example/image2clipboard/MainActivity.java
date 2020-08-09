@@ -148,10 +148,10 @@ public class MainActivity extends Activity {
                     //mediaFileInfo.setFileType(type);
                     mediaList.add(mediaFileInfo);
                     i++;
-
                     imgAdap.notifyDataSetChanged();
+
                     if(i > 10 + off) {
-                        off+=100;
+                        off+=10;
 
                         break;
 
@@ -186,6 +186,7 @@ public class MainActivity extends Activity {
                 try {
                     while(true) {
                         parseAllImages();
+
                         sleep(30);
                     }
                 } catch (InterruptedException e) {
@@ -195,7 +196,6 @@ public class MainActivity extends Activity {
         };
 
         thread.start();
-
 
 
         gridView = (GridView) findViewById(R.id.gridView1);
